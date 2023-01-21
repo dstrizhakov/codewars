@@ -13,11 +13,9 @@ function combine() {
 	let obj = {}
 	for (let i = 0; i < arguments.length; i++) {
 		for (let key in arguments[i]) {
-			if (!obj[key]) {
-				obj[key] = arguments[i][key];
-			} else {
-				obj[key] += arguments[i][key];
-			}
+			(!obj[key])
+				? obj[key] = arguments[i][key]
+				: obj[key] += arguments[i][key]
 		}
 	}
 	return obj
