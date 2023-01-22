@@ -26,3 +26,7 @@ function isPowerOfTwo(n) {
 	if (n < 2) return false;
 	return isPowerOfTwo(n / 2);
 }
+
+
+// самое умное решение:
+// const isPowerOfTwo = (n) => Number.isInteger(Math.log2(n))
