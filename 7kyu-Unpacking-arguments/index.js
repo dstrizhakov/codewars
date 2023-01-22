@@ -13,3 +13,8 @@ someFunction(1, true, "Foo", "bar")
 function spread(func, args) {
 	return func(...args)
 }
+
+
+// function spread(func, args) {
+//   return func.apply(this, args);
+// }
