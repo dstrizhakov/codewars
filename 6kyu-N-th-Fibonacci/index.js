@@ -24,5 +24,5 @@ function nthFibo(n) {
 // }
 // Рекурсивное решение:
 // function nthFibo(n) {
-//   return n < 2 ? 0 : n == 2 ? 1 : nthFibo(n-1) + nthFibo(n-2);
+// 	return n < 2 ? 0 : n == 2 ? 1 : nthFibo(n - 1) + nthFibo(n - 2);
 // }
