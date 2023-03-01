@@ -40,6 +40,7 @@ Formally, the duration specified by of a component must not be greater
 than any valid more significant unit of time
 */
 
+// мое решение:
 function formatDuration(seconds) {
   if (seconds === 0) {
     return "now";
@@ -127,3 +128,23 @@ function formatDuration(seconds) {
 }
 
 console.log(formatDuration(3600));
+
+// самое умное решение:
+/*
+function formatDuration (seconds) {
+  var time = { year: 31536000, day: 86400, hour: 3600, minute: 60, second: 1 },
+      res = [];
+
+  if (seconds === 0) return 'now';
+  
+  for (var key in time) {
+    if (seconds >= time[key]) {
+      var val = Math.floor(seconds/time[key]);
+      res.push(val += val > 1 ? ' ' + key + 's' : ' ' + key);
+      seconds = seconds % time[key];
+    }
+  }
+ 
+  return res.length > 1 ? res.join(', ').replace(/,([^,]*)$/,' and'+'$1') : res[0]
+}
+*/
