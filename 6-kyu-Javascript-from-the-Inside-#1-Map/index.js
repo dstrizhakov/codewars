@@ -52,3 +52,14 @@ Array.prototype.map = function (fn, nThis) {
   this.forEach((v, i, arr) => (newArr[i] = fn.apply(nThis, [v, i, arr])));
   return newArr;
 };
+
+// или так
+Array.prototype.map = function (func, context) {
+  let arr = [...this];
+  for (let i in this) {
+    if (!isNaN(i)) {
+      arr[i] = func.call(context, arr[i], +i, this);
+    }
+  }
+  return arr;
+};
