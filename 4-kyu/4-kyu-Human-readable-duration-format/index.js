@@ -127,7 +127,7 @@ function formatDuration(seconds) {
   return duration;
 }
 
-console.log(formatDuration(3600));
+console.log(formatDuration(360000));
 
 // самое умное решение:
 /*
